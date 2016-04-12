@@ -1,0 +1,23 @@
+<hi> Welcome to My Travel Site </hi>
+<p> This is my very awesome travel site. </p>
+<p><%= @homestate %></p>
+
+<ol>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+<% end %>
+</ol>
+
+<%#= image_tag "peru.jpg", alt: "Peru", id: "peru_pic", class: "travel-pics" %>
+<%#= image_tag "peru2.jpg", alt: "Peru2", id: "peru_pic2", class: "travel-pics" %>
+<%#= image_tag "georgia.jpg", alt: "Georgia", id: "georgia_pic", class: "travel-pics" %>
+<%#= image_tag "croatia.jpg", alt: "Peru", id: "croatia_pic", class: "travel-pics" %>
+<!-- Passing Image Names & Alts through Array -->
+<% @images.each do |image| %>
+<p><%= image_tag image, alt: "Happy Travel" %></p>
+<% end %>
+
+<!--Passing Images Names & Alts through Hash -->
+<% @image_hash.each do |key, value| %>
+<p><%= image_tag value, alt: key %></p>
+<% end %>
